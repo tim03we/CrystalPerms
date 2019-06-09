@@ -1,0 +1,19 @@
+---
+default: "Player"
+
+Player:
+    permissions:
+    - pocketmine.command.transfer
+    inheritance: []
+    chat-format: "§7Player §8| §7{player} §8> §f{msg}"
+    nametag-format: "§7Player §8| §7{player}"
+Owner:
+    permissions:
+    - pocketmine.command.ban
+    - pocketmine.command.kick
+    - '*'
+    inheritance:
+    - Player
+    chat-format: "§4Owner§8 | §4{player} §8> §f{msg}"
+    nametag-format: "§4Owner §8| §4{player}"
+...

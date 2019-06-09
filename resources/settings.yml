@@ -1,0 +1,10 @@
+---
+# Choose true or false to enable/disable the chat function
+chat-format: true
+
+# Change the messages according to your choice.
+messages:   
+    kick: "You just got the {group} rank."
+    group-success: "You gave the player {player} the group {group} assigned."
+    group-not-exist: "This group does not exist."
+...
