@@ -38,7 +38,6 @@ class ChatListener implements Listener {
         $chat = $this->plugin->gcfg->getNested($pfile->get("group") . ".chat-format");
         $chat = str_replace("{player}", $player->getName(), $chat);
         $chat = str_replace("{msg}", $event->getMessage(), $chat);
-        $event->setCancelled(true);
-        $this->plugin->getServer()->broadcastMessage($chat);
+        $event->setFormat($chat);
     }
 }
