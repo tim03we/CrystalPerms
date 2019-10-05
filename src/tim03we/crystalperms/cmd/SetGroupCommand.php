@@ -36,6 +36,9 @@ class SetGroupCommand extends Command {
 
     public function execute(CommandSender $sender, string $commandLabel, array $args)
     {
+        if(!$this->testPermission($sender)) {
+			return false;
+		}
         if(isset($args[0]) && isset($args[1])) {
             $target = $this->plugin->getServer()->getPlayer($args[0]);
             if($target == null) {
